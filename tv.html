@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Show Watch Page</title>
+    <script src="script1.js" defer></script>
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0;
+}
+
+header {
+    background-color:black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+video:hover {
+    transform: scale(1.03);
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.video-description {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.tv-shows {
+    margin: 20px;
+}
+
+.show-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.show-item {
+    background:white;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.show-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.show-item:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color:black #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.back-button {
+            background-color: #1d2024; /* Bootstrap primary color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #0e0f0f;
+        }
+
+        .back-button:active {
+            transform: scale(0.95);
+        }
+
+        h1 {
+            color: white;
+        }
+
+        span {
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to online streaming</h1>
+</header>
+
+<main>
+    <section class="video-container">
+        <video id="featuredVideo" controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-description">
+            <h2>Enjoy your Movie</h2>
+           
+        </div>
+    </section>
+
+    <section class="tv-shows">
+        <h2>Watch More Shows</h2>
+        <div class="show-grid">
+            <div class="show-item" data-video-url="https://www.youtube.com/watch?v=DZ5oH8VaX_g">
+                <img src="img/romance/img4.jpeg" alt="Show Thumbnail 1">
+                <h3>free to watch: Life In A Year</h3>
+            </div>
+            <div class="show-item" data-video-url="https://www.youtube.com/watch?v=b6rDOCjnXzU">
+                <img src="img/action/the-mother-nn.jpg" alt="Show Thumbnail 2">
+                <h3>free to watch: The Mother</h3>
+            </div>
+            <div class="show-item" data-video-url="https://www.youtube.com/watch?v=_inKs4eeHiI">
+                <img src="img/new reales/panda.jpeg" alt="Show Thumbnail 3">
+                <h3>free to watch: Panda</h3>
+            </div>
+            <!-- Add more shows here -->
+        </div>
+    </section>
+</main>
+<div class="container">
+    <button id="backButton" class="back-button"><a href="index.html">Back</a></button>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
